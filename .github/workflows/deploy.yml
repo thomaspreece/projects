@@ -25,11 +25,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        
+      - name: Build
+        run: npm run build
 
-      - name: Set git identity
-        run:  git config --global user.email "ghpages@thomaspreece.com" && git config --global user.name "Github Actions"
-
-      - name: Deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # used by gh-pages
-        run: npm run deploy
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build # The folder the action should deploy.        
