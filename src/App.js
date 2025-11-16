@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import './App.css'
 import Card from './Card';
 
@@ -27,15 +27,15 @@ function Deck() {
 
   const [offset, setOffset] = useState(0);
 
-  const handleKeyDown = (event) => {
-      if(event.key === "ArrowRight"){
-        setOffset(offset + 1)
-      }
-      if(event.key === "ArrowLeft") {
-        setOffset(offset - 1)
-      }
-  };
-
+  const handleKeyDown = useCallback((event) => {
+    if(event.key === "ArrowRight"){
+      setOffset(offset + 1)
+    }
+    if(event.key === "ArrowLeft") {
+      setOffset(offset - 1)
+    }
+  }, [offset]);
+  
   useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
 
