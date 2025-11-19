@@ -1,0 +1,62 @@
+name: New Project
+description: File a new project
+title: "[Project]: Few words to title project"
+labels: ["project"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Brief Description of Project
+      placeholder: 5-10 words
+    validations:
+      required: true
+  - type: textarea
+    id: features
+    attributes:
+      label: List of features
+      placeholder: |
+        - Feature 1
+        - Feature 2
+      value: "- "
+    validations:
+      required: true   
+  - type: checkboxes
+    id: category
+    attributes:
+      label: Category
+      options:
+        - label: Woodworking
+        - label: Electronics
+        - label: Crafts
+        - label: Homelab
+        - label: Software Engineering
+        - label: Information Security 
+        - label: 3D Printing
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      options:
+        - BACKLOG
+        - STARTED
+        - COMPLETE
+        - CANCELLED
+        - DECOMISSIONED
+      default: 0
+    validations:
+      required: true
+  - type: input
+    id: status_text
+    attributes:
+      label: Optional Status Reason
+      placeholder: It didn't work
+    validations:
+      required: false
+
+  - type: textarea
+    id: image
+    attributes:
+      label: Attach image below
+      placeholder: Image Here
+    validations:
+      required: true

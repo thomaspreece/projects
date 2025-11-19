@@ -1,0 +1,69 @@
+name: Create Project JSON
+
+on:
+  issues:
+    types: [opened,reopened]
+
+jobs:
+  project-issue:
+    permissions:
+      contents: write
+      issues: write 
+    if: github.event.issue.user.login == 'thomaspreece'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+        
+      - name: Parse Issue 
+        uses: stefanbuck/github-issue-parser@v3
+        id: issue-parser
+        with:
+          template-path: .github/ISSUE_TEMPLATE/project.yml 
+
+      - name: Cleanup Issue Parsing
+        env:
+          TITLE: ${{ github.event.issue.title }}      
+        run: |
+          CLEAN_TITLE=$(echo "$TITLE" | sed 's/^\[Project\]:\s*//')
+          jq --arg title "$CLEAN_TITLE" '. + {name: $title}' "${HOME}/issue-parser-result.json" > ${HOME}/issue.json
+     
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'  # or your preferred version
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Process Issue
+        run: npm run processIssue ${HOME}/issue.json
+
+      - name: Commit New Project
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'github-actions@thomaspreece.com'
+          git add -A
+          git commit -m "Add project - #$ISSUE_NUMBER"
+          git push
+
+      - name: Remove image from issue
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          BODY: ${{ github.event.issue.body }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}      
+        run: |
+          TMP_FILE=$(mktemp)
+          awk '/^### Attach image below/ { print; exit } { print }' <<< "$BODY" > "$TMP_FILE"
+          gh issue edit "$ISSUE_NUMBER" --body-file "$TMP_FILE"
+          rm "$TMP_FILE"
+        
+      - name: Close Issue
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh issue close --comment "Project Processed" "$ISSUE_NUMBER"
+          

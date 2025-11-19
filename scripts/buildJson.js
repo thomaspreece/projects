@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const rootDir = path.join(__dirname, "../", 'projects');
-const outputFile = path.join(__dirname, "../src" ,'projects.json');
+const outputFile = path.join(__dirname, "../public" ,'projects.json');
 
 // Where image paths should be resolved relative to:
 const imageBasePath = path.join(__dirname, "../", "public"); // change if needed
@@ -45,12 +45,12 @@ async function validateProjectJson(obj, filePath) {
 
   // Validate image exists
   if (typeof obj.image === "string") {
-    const imagePath = path.join(imageBasePath, obj.image);
+    const imagePath = path.join(imageBasePath, "/project_images/" ,obj.image);
 
     try {
       await fs.promises.access(imagePath, fs.constants.F_OK);
     } catch {
-      errors.push(`Image file does not exist: ${obj.image}`);
+      errors.push(`Image file does not exist: ${imagePath}`);
     }
   }
 

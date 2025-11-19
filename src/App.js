@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react'
 import './App.css'
 import Card from './Card';
 
-import rawCardDataArray from './projects.json';
+import rawCardDataArray from '../public/projects.json';
 
 const maxRenderedCards = 8
 
@@ -17,7 +17,7 @@ const statues = {
 const cardDataArray = rawCardDataArray.map((i) => {
   const shallowCopy = Object.assign({}, i);
   if (!shallowCopy.image.startsWith("http")){
-    shallowCopy.image = process.env.PUBLIC_URL + shallowCopy.image 
+    shallowCopy.image = process.env.PUBLIC_URL + "/project_images/" + shallowCopy.image 
   }
   shallowCopy.status = statues[shallowCopy.status]
   return shallowCopy
