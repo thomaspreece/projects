@@ -1,0 +1,16 @@
+{
+  "description": "A tiny bot that shows messages and our wedding photos",
+  "features": [
+    "Rechargable Battery",
+    "Touchscreen",
+    "Some half baked code"
+  ],
+  "category": [
+    "Electronics",
+    "3D Printing"
+  ],
+  "status": "COMPLETE",
+  "status_text": "",
+  "image": "tombot.jpg",
+  "name": "TomBot"
+}
