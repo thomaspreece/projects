@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { useSpring, animated, to } from 'react-spring'
 
 // TODO: Fix issue where cards flip if you move more than one at a time 
@@ -11,6 +11,8 @@ function Card({cardPosition, cardIndex, maximumCards, cardDataArray}) {
   const cardDataArrayMaximum = cardDataArray.length
 
   const cardRef = useRef(null);
+  const imgRef = useRef(null);
+  const imgDivRef = useRef(null);
   
   var width = 0
   var height = 0
@@ -21,6 +23,12 @@ function Card({cardPosition, cardIndex, maximumCards, cardDataArray}) {
     height = boundingRect.height
   }
   
+  const [tapeOffset, setTapeOffset] = useState({
+    tapeWidth: 0,
+    tapeHeight: 0,
+    tapeTop: 0,
+    tapeLeft: 0    
+  });
 
   const maximumIndex = maximumCards - 1
   
@@ -60,10 +68,42 @@ function Card({cardPosition, cardIndex, maximumCards, cardDataArray}) {
     }
   }
 
+ 
+
   var dataIndex = (cardIndex + dataOffset) % cardDataArrayMaximum
   if(dataIndex < 0){
     dataIndex += cardDataArrayMaximum
   }
+
+  if(imgRef.current && imgDivRef.current){
+    const top = (imgDivRef.current.offsetHeight - imgRef.current.offsetHeight)/2
+    const left = (imgDivRef.current.offsetWidth - imgRef.current.offsetWidth)/2
+    if (
+      tapeOffset.tapeWidth != imgRef.current.offsetWidth ||
+      tapeOffset.tapeHeight != imgRef.current.offsetHeight ||
+      tapeOffset.tapeTop != top ||
+      tapeOffset.tapeLeft != left
+    ) {
+      setTapeOffset({
+        tapeWidth: imgRef.current.offsetWidth,
+        tapeHeight: imgRef.current.offsetHeight,
+        tapeTop: top,
+        tapeLeft: left    
+      })
+    }    
+  }
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTapeOffset({
+        tapeWidth: imgRef.current.offsetWidth,
+        tapeHeight: imgRef.current.offsetHeight,
+        tapeTop: (imgDivRef.current.offsetHeight - imgRef.current.offsetHeight)/2,
+        tapeLeft: (imgDivRef.current.offsetWidth - imgRef.current.offsetWidth)/2    
+      })
+    }, 1000)
+
+  }, []);  
 
   const cardData = cardDataArray[dataIndex]
   var feature_list_jsx = <ul>
@@ -87,8 +127,15 @@ function Card({cardPosition, cardIndex, maximumCards, cardDataArray}) {
 
   const card_jsx = <animated.div key={cardPosition} className="cardcontainer" style={{ transform: to([props.x, props.y], (x, y) => `translate3d(${x}px,${y}px,0)`) , zIndex: props.zIndex}} cardnumber={dataIndex}>
     <animated.div ref={cardRef} className="card" style={{ transform: to([props.rot, props.scale], trans), backgroundImage: `url(${process.env.PUBLIC_URL}/notebook.png)` }}>
+      <div className="cardimagetape">
+        <div style={{width: tapeOffset.tapeWidth, height: tapeOffset.tapeHeight, position: "relative", zIndex: 1, top: tapeOffset.tapeTop, left: tapeOffset.tapeLeft}}>
+          <div className="tape-section"></div>
+        </div>
+      </div>
       <div className="cardimage" >
-        <div style={{backgroundImage: `url(${cardData.image})`}}></div>
+        <div ref={imgDivRef}>
+          {cardData.image.length > 0 ? <img ref={imgRef} className="cardimageimage" src={cardData.image} /> : null}
+        </div>
       </div>
       <div className="cardstatus"> 
         <div>

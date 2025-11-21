@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --tape-gray: #dbd8be;
+  --tape-edge-gray: #b7b49d;
+}
+
 html,
 body {
   overscroll-behavior-y: contain;
@@ -53,12 +58,99 @@ body {
   position: absolute;
 }
 
+.cardimagetape {
+  width: 50%;
+  height: 100%;
+  padding: 5% 5% 5% 8%;
+  position: absolute;  
+}
+
 .cardimage {
   width: 50%;
   height: 100%;
   padding: 5% 5% 5% 8%;
   position: absolute;
 }
+
+.cardimage > div {
+  position: relative;
+}
+
+.cardimage >  div > img{
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto; 
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(2deg);
+  top: 50%;
+  left: 50%;
+  object-fit: contain;
+  border-radius: 5px;
+
+  border: 10px solid #dadada; 
+  border-bottom: 25px solid #dadada; 
+  -webkit-box-shadow: 0px 0px 10px #777; 
+  -moz-box-shadow: 0px 0px 10px #777; 
+  box-shadow: 0px 0px 10px #777;
+  -webkit-transform: rotate (3deg);
+  -moz-transform: rotate (3deg);
+}
+
+
+
+
+.tape-section {
+  position: absolute;
+  width: 100%;
+}
+
+.tape-section:first-of-type {
+  top: 0;
+}
+
+.tape-section:last-of-type {
+  bottom: 0;
+}
+
+.tape-section::before,
+.tape-section::after {
+  content: "";
+  width: 10vmin;
+  height: 4vmin;
+  position: absolute;
+  background-color: var(--tape-gray);
+  opacity: 0.7;
+  border-right: 1px dotted var(--tape-edge-gray);
+  border-left: 1px dotted var(--tape-edge-gray);
+}
+
+.tape-section:last-of-type::after {
+  transform: rotate(-45deg);
+  right: -4vmin;
+  top: -3vmin;
+}
+
+.tape-section:first-of-type::before {
+  transform: rotate(-45deg);
+  left: -4vmin;
+}
+
+.tape-section:first-of-type::after {
+  transform: rotate(45deg);
+  right: -4vmin;
+  top: 0;
+}
+
+.tape-section:last-of-type::before {
+  transform: rotate(45deg);
+  left: -4vmin;
+  bottom: 0;
+}
+
+
+
+
 
 .carddata {
   width: 50%;

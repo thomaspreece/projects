@@ -17,7 +17,11 @@ const statues = {
 const cardDataArray = rawCardDataArray.map((i) => {
   const shallowCopy = Object.assign({}, i);
   if (!shallowCopy.image.startsWith("http")){
-    shallowCopy.image = process.env.PUBLIC_URL + "/project_images/" + shallowCopy.image 
+    if (shallowCopy.image.length > 0) {
+      shallowCopy.image = process.env.PUBLIC_URL + "/project_images/" + shallowCopy.image 
+    } else {
+      shallowCopy.image = process.env.PUBLIC_URL + "/blank.jpg"
+    }
   }
   shallowCopy.status = statues[shallowCopy.status]
   return shallowCopy
