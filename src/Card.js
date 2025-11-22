@@ -107,7 +107,7 @@ function Card({cardPosition, cardIndex, maximumCards, cardDataArray}) {
     setTimeout(() => {
       handleResize()
     }, 1000)
-  }, []);  
+  }, [handleResize]);  
 
   // Calculate the data item currently shown by card
   var dataIndex = (cardIndex + dataOffset) % cardDataArrayMaximum
