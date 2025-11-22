@@ -29,7 +29,7 @@ const cardDataArray = rawCardDataArray.map((i) => {
 
 function Deck() {
 
-  const [offset, setOffset] = useState(0);
+  const [offset, setOffset] = useState(2);
 
   const handleKeyDown = useCallback((event) => {
     if(event.key === "ArrowRight"){
@@ -51,26 +51,11 @@ function Deck() {
 
   var deck_jsx = []
   Array.from({ length: maxRenderedCards }, (x, i) => {
-    const cuttoff = Math.ceil(maxRenderedCards/2)
-
-    // Card Index. Orders cards so front has 0,1,2,3... and back has -1,-2,-3,...
-    // Numbers meet in middle of card stack at cuttoff
-    var cardIndex = maxRenderedCards - i - 1
-    if (cardIndex >= cuttoff) {
-      cardIndex = - (maxRenderedCards-cardIndex)
-    }
-
-    // Card Position back=0, front=max
-    var cardPosition = (i + offset) % maxRenderedCards
-    if(cardPosition < 0) {
-      cardPosition += maxRenderedCards
-    }
-
     deck_jsx.push(<Card 
       key={i} 
       cardDataArray={cardDataArray}
-      cardPosition={cardPosition} 
-      cardIndex={cardIndex} 
+      initialCardNumber={i}
+      cardOffset={offset}
       maximumCards={maxRenderedCards} 
     />)
 

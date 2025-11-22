@@ -1,13 +1,34 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react'
 import { useSpring, animated, to } from 'react-spring'
-
+import "./Card.css"
 // TODO: Fix issue where cards flip if you move more than one at a time 
 
 const trans = (r, s) => `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
-const showDebug = false 
+const showDebug = true 
 
 
-function Card({cardPosition, cardIndex, maximumCards, cardDataArray}) {
+function Card({
+  initialCardNumber,
+  cardOffset,
+  maximumCards, 
+  cardDataArray
+}) {
+  const cardIndexCuttoff = Math.ceil(maximumCards/2)
+
+  // Card Index. Orders cards so front has 0,1,2,3... and back has -1,-2,-3,...
+  // Numbers meet in middle of card stack at cuttoff
+  var cardIndex = maximumCards - initialCardNumber - 1
+  if (cardIndex >= cardIndexCuttoff) {
+    cardIndex = - (maximumCards-cardIndex)
+  }
+
+  // Card Position back=0, front=max
+  var cardPosition = (initialCardNumber + cardOffset) % maximumCards
+  if(cardPosition < 0) {
+    cardPosition += maximumCards
+  }
+
+
   const cardDataArrayMaximum = cardDataArray.length
 
   const cardRef = useRef(null);
