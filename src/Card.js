@@ -1,10 +1,9 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react'
 import { useSpring, animated, to } from 'react-spring'
 import "./Card.css"
-// TODO: Fix issue where cards flip if you move more than one at a time 
 
 const trans = (r, s) => `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
-const showDebug = true 
+const showDebug = false 
 
 
 function Card({
