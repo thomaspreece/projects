@@ -17,17 +17,17 @@ function Card({
 
   // Card Index. Orders cards so front has 0,1,2,3... and back has -1,-2,-3,...
   // Numbers meet in middle of card stack at cuttoff
-  var cardIndex = maximumCards - initialCardNumber - 1
+  var cardIndex = (maximumCards -1) - initialCardNumber
   if (cardIndex >= cardIndexCuttoff) {
-    cardIndex = - (maximumCards-cardIndex)
+    cardIndex = cardIndex - maximumCards
   }
 
   // Card Position back=0, front=max
-  var cardPosition = (initialCardNumber + cardOffset) % maximumCards
+  var fullCardPosition = (initialCardNumber + cardOffset)
+  var cardPosition = fullCardPosition % maximumCards
   if(cardPosition < 0) {
     cardPosition += maximumCards
   }
-
 
   const cardDataArrayMaximum = cardDataArray.length
 
@@ -57,8 +57,6 @@ function Card({
     return i % maximumCards  
   }
 
-  const cuttoff = Math.floor(maximumCards/2)
-  
   // These two are just helpers, they curate spring data, values that are later being interpolated into css
   const start_to = i => ({ x: 0, y: (i * 4 - height*0.1), scale: 1, rot: -10 + Math.random() * 20, delay: i * 100 + 1000 })
   const start_from = i => ({ x: 0, rot: 0, scale: 1.5, y: -1000, zIndex: zIndex(i) })
@@ -66,11 +64,9 @@ function Card({
   const [props, set] = useSpring(i => ({ ...start_to(cardPosition), from: start_from(cardPosition) })) 
 
   const [prevCardPosition, setPrevCardPosition] = useState(cardPosition);
-  const [dataOffset, setdataOffset] = useState(0);
 
-
+  // Move cards when cardPosition changes
   if (cardPosition !== prevCardPosition) {
-    
     if(prevCardPosition === maximumIndex && cardPosition === 0){
       // Card Moving to back of stack 
       set([{zIndex: 100, x: (width*1.2)}, {zIndex: -100}, start_to(cardPosition), {zIndex: zIndex(cardPosition)}])
@@ -82,14 +78,13 @@ function Card({
       set({zIndex: zIndex(cardPosition), immediate: true})
     }
     setPrevCardPosition(cardPosition);
-
-    if (prevCardPosition === cuttoff && cardPosition === cuttoff-1){
-      setdataOffset(dataOffset - maximumCards)
-    } else if (prevCardPosition === cuttoff-1 && cardPosition === cuttoff){
-      setdataOffset(dataOffset + maximumCards)
-    }
   }
 
+  // We want cards to update whilst hidden in middle of stack
+  // This function somehow magics that into happening. 
+  // Trial and error to get it working. Wouldn't advice changing.
+  var dataOffset = (Math.floor((fullCardPosition + cardIndexCuttoff)/maximumCards) - Math.ceil((cardIndex+1)/maximumCards))*8
+  
   // Function to move the sticky tape on the images to correct place
   const handleResize = useCallback(() => {
     const top = (imgDivRef.current.offsetHeight - imgRef.current.offsetHeight)/2
@@ -152,10 +147,12 @@ function Card({
   </ul>
 
   const debug_jsx = <div className="carddebug">
-    Position: {cardPosition} <br/>
-    Index: {cardIndex} <br />
-    Data Index: {dataIndex} <br />
-    Data Offset: {dataOffset} <br />
+    cardPosition: {cardPosition} <br/>
+    initialCardNumber: {initialCardNumber} <br/>
+    cardIndex: {cardIndex} <br />
+    dataIndex: {dataIndex} <br />
+    dataOffset: {dataOffset} <br />
+    cardOffset: {cardOffset} <br />
   </div>
 
   const card_jsx = <animated.div key={cardPosition} className="cardcontainer" style={{ transform: to([props.x, props.y], (x, y) => `translate3d(${x}px,${y}px,0)`) , zIndex: props.zIndex}} cardnumber={dataIndex}>

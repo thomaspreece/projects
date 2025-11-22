@@ -4,7 +4,8 @@ import Card from './Card';
 
 import rawCardDataArray from './projects.json';
 
-const maxRenderedCards = 8
+// Use even number otherwise it breaks
+const maxRenderedCards = 8 
 
 const statues = {
   "BACKLOG": "💡 Ideation",
