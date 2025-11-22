@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useCallback } from 'react'
 import { useSpring, animated, to } from 'react-spring'
 
 // TODO: Fix issue where cards flip if you move more than one at a time 
@@ -57,6 +57,7 @@ function Card({cardPosition, cardIndex, maximumCards, cardDataArray}) {
       // Card Moving to front of stack
       set([{zIndex: -100, x: -(width*1.2)}, {zIndex: 100}, start_to(cardPosition), {zIndex: zIndex(cardPosition)}])
     } else {
+      // Shifting Z position of other cards
       set({zIndex: zIndex(cardPosition), immediate: true})
     }
     setPrevCardPosition(cardPosition);
@@ -68,21 +69,15 @@ function Card({cardPosition, cardIndex, maximumCards, cardDataArray}) {
     }
   }
 
- 
-
-  var dataIndex = (cardIndex + dataOffset) % cardDataArrayMaximum
-  if(dataIndex < 0){
-    dataIndex += cardDataArrayMaximum
-  }
-
-  if(imgRef.current && imgDivRef.current){
+  // Function to move the sticky tape on the images to correct place
+  const handleResize = useCallback(() => {
     const top = (imgDivRef.current.offsetHeight - imgRef.current.offsetHeight)/2
     const left = (imgDivRef.current.offsetWidth - imgRef.current.offsetWidth)/2
     if (
-      tapeOffset.tapeWidth != imgRef.current.offsetWidth ||
-      tapeOffset.tapeHeight != imgRef.current.offsetHeight ||
-      tapeOffset.tapeTop != top ||
-      tapeOffset.tapeLeft != left
+      tapeOffset.tapeWidth !== imgRef.current.offsetWidth ||
+      tapeOffset.tapeHeight !== imgRef.current.offsetHeight ||
+      tapeOffset.tapeTop !== top ||
+      tapeOffset.tapeLeft !== left
     ) {
       setTapeOffset({
         tapeWidth: imgRef.current.offsetWidth,
@@ -90,22 +85,39 @@ function Card({cardPosition, cardIndex, maximumCards, cardDataArray}) {
         tapeTop: top,
         tapeLeft: left    
       })
-    }    
+    }
+  }, [tapeOffset, imgRef, imgDivRef]);
+  
+  // Refresh tape location when viewport is resized
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [handleResize]);
+
+  // Refresh tape location when image changes
+  if(imgRef.current && imgDivRef.current){
+    handleResize()     
   }
 
+  // Refresh tape location after image has had chance to load 
   useEffect(() => {
     setTimeout(() => {
-      setTapeOffset({
-        tapeWidth: imgRef.current.offsetWidth,
-        tapeHeight: imgRef.current.offsetHeight,
-        tapeTop: (imgDivRef.current.offsetHeight - imgRef.current.offsetHeight)/2,
-        tapeLeft: (imgDivRef.current.offsetWidth - imgRef.current.offsetWidth)/2    
-      })
+      handleResize()
     }, 1000)
-
   }, []);  
 
+  // Calculate the data item currently shown by card
+  var dataIndex = (cardIndex + dataOffset) % cardDataArrayMaximum
+  if(dataIndex < 0){
+    dataIndex += cardDataArrayMaximum
+  }
+
   const cardData = cardDataArray[dataIndex]
+  
+  // Generate JSX
   var feature_list_jsx = <ul>
     {cardData.features.map((v, i) => {
       if (typeof v == "string"){
@@ -129,12 +141,12 @@ function Card({cardPosition, cardIndex, maximumCards, cardDataArray}) {
     <animated.div ref={cardRef} className="card" style={{ transform: to([props.rot, props.scale], trans), backgroundImage: `url(${process.env.PUBLIC_URL}/notebook.png)` }}>
       <div className="cardimagetape">
         <div style={{width: tapeOffset.tapeWidth, height: tapeOffset.tapeHeight, position: "relative", zIndex: 1, top: tapeOffset.tapeTop, left: tapeOffset.tapeLeft}}>
-          <div className="tape-section"></div>
+          {cardData.image.length > 0 ? <div className="tape-section"></div> : null}
         </div>
       </div>
       <div className="cardimage" >
         <div ref={imgDivRef}>
-          {cardData.image.length > 0 ? <img ref={imgRef} className="cardimageimage" src={cardData.image} /> : null}
+          {cardData.image.length > 0 ? <img ref={imgRef} alt={cardData.name} className="cardimageimage" src={cardData.image} /> : null}
         </div>
       </div>
       <div className="cardstatus"> 

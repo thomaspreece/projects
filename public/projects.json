@@ -25,5 +25,52 @@
         "link": "https://github.com/AutomaticCheeseMaker/CheeseMaker"
       }
     ]
+  },
+  {
+    "description": "A mini 10inch 3D printed rack to hold my homelab",
+    "features": [
+      "Patch panel",
+      "2 Nodes and switches",
+      "Made of PLA - hope it don't get too hot"
+    ],
+    "category": [
+      "Homelab",
+      "3D Printing"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "mini-rack.jpg",
+    "name": "Mini Rack"
+  },
+  {
+    "description": "Low effort way to show off my projects.",
+    "features": [
+      "ReactJS & GitHub Pages",
+      "Inspired by board game art",
+      "Issues translated into project these cards"
+    ],
+    "category": [
+      "Software Engineering"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "projects-site.jpg",
+    "name": "Projects Site"
+  },
+  {
+    "description": "A tiny bot that shows messages and our wedding photos",
+    "features": [
+      "Rechargable Battery",
+      "Touchscreen",
+      "Some half baked code"
+    ],
+    "category": [
+      "Electronics",
+      "3D Printing"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "tombot.jpg",
+    "name": "TomBot"
   }
 ]

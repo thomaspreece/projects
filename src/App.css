@@ -82,12 +82,11 @@ body {
   width: auto;
   height: auto; 
   position: absolute;
-  transform: translate(-50%, -50%) rotate(2deg);
+  transform: translate(-50%, -50%) rotate(3deg);
   top: 50%;
   left: 50%;
   object-fit: contain;
-  border-radius: 5px;
-
+  border-radius: 3px;
   border: 10px solid #dadada; 
   border-bottom: 25px solid #dadada; 
   -webkit-box-shadow: 0px 0px 10px #777; 
