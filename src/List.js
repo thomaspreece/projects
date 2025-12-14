@@ -3,6 +3,10 @@ import { Link, useParams } from 'react-router';
 import { nameToSlug, statues } from './helpers';
 import './List.css'
 
+const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+  "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"
+];
+
 function List({projectsArray, projectCategories}) {
 
   let { categoryNameSlug } = useParams();
@@ -35,7 +39,7 @@ function List({projectsArray, projectCategories}) {
     let projects_for_status_jsx = projects_for_status
       .map(
         (project, i) => <li key={`project-${i}`}>
-          <Link to={`/view/${categoryNameSlug}/item/${nameToSlug(project.name)}`}>{project.name} ({project.createdDate.split("-")[0]})</Link>
+          <Link to={`/view/${categoryNameSlug}/item/${nameToSlug(project.name)}`}>{project.name} ({monthNames[parseInt(project.createdDate.split("-")[1])-1]} {project.createdDate.split("-")[0]})</Link>
         </li>)
     
     if(projects_for_status.length > 0){
