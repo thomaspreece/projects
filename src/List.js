@@ -3,16 +3,6 @@ import { Link, useParams } from 'react-router';
 import { nameToSlug, statues } from './helpers';
 import './List.css'
 
-function compareByKey(a, b, key) {
-  if(a[key] < b[key]){
-    return -1 
-  } else if (a[key] > b[key]){
-    return 1
-  } else {
-    return 0
-  }
-}
-
 function List({projectsArray, projectCategories}) {
 
   let { categoryNameSlug } = useParams();
@@ -40,14 +30,6 @@ function List({projectsArray, projectCategories}) {
     let projects_for_status = filteredProjectsArray
       .filter((project) => {
         return project["status"] === status
-      })
-      .sort((a, b) => {
-        if("createdDate" in a && "createdDate" in b){
-          return -1*compareByKey(a, b, "createdDate")
-        } else {
-          return compareByKey(a, b, "name")
-        }
-        
       })
 
     let projects_for_status_jsx = projects_for_status

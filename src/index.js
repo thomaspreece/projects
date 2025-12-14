@@ -9,6 +9,17 @@ import { BrowserRouter, Routes, Route, Navigate  } from "react-router";
 import { statues } from './helpers';
 import rawProjectArray from './projects.json';
 
+
+function compareByKey(a, b, key) {
+  if(a[key] < b[key]){
+    return -1 
+  } else if (a[key] > b[key]){
+    return 1
+  } else {
+    return 0
+  }
+}
+
 const getProjectsArray = () => {
   return rawProjectArray.map((i) => {
     const shallowCopy = Object.assign({}, i);
@@ -21,6 +32,14 @@ const getProjectsArray = () => {
     }
     shallowCopy.status = statues[shallowCopy.status]
     return shallowCopy
+  })
+  .sort((a, b) => {
+    if("createdDate" in a && "createdDate" in b){
+      return -1*compareByKey(a, b, "createdDate")
+    } else {
+      return compareByKey(a, b, "name")
+    }
+    
   })
 }
 
