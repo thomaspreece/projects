@@ -1,5 +1,42 @@
 [
   {
+    "description": "NodeJS based framework of tools to make adaptive stories",
+    "features": [
+      "NodeJS & React",
+      "Used to create BBC Click 1000th episode",
+      {
+        "text": "Read more",
+        "link": "https://thomaspreece.com/2020/09/26/project-storykit/"
+      }
+    ],
+    "category": [
+      "Software Engineering"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "adaptive-storytelling.jpg",
+    "name": "Adaptive Storytelling",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2020-09-26"
+  },
+  {
+    "description": "Large arch light for lighting your desk",
+    "features": [
+      "Bent plywood sheets",
+      "Dimmable LED strip",
+      "Paper light diffuser"
+    ],
+    "category": [
+      "Woodworking"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "arch-light.jpg",
+    "name": "Arch Light",
+    "updatedDate": "2025-12-13",
+    "createdDate": "2025-12-13"
+  },
+  {
     "image": "",
     "name": "Automatic Cat Feeder",
     "description": "Sometimes it feeds your cat. Sometimes the cat is unhappy.",
@@ -15,7 +52,48 @@
       "A tendency to clog"
     ],
     "updatedDate": "2025-11-20",
-    "createdDate": "2025-11-20"
+    "createdDate": "2022-04-01"
+  },
+  {
+    "description": "Research into the security of AWS CodeConnections via their use in several different AWS Services",
+    "features": [
+      "AWS CodeBuild, CodePipeline",
+      "Security issues found",
+      {
+        "text": "Read more",
+        "link": "https://thomaspreece.com/2025/12/04/project-aws-codeconnections/"
+      }
+    ],
+    "category": [
+      "Software Engineering",
+      "Information Security"
+    ],
+    "status": "STARTED",
+    "status_text": "",
+    "image": "aws-codeconnections-research.jpg",
+    "name": "AWS CodeConnections Research",
+    "updatedDate": "2025-12-9",
+    "createdDate": "2025-12-9"
+  },
+  {
+    "description": "An updated Backdoor & Breaches to include an AWS focused deck",
+    "features": [
+      "AWS Incident Scenarios",
+      "Fun",
+      {
+        "text": "Read more",
+        "link": "https://github.com/thomaspreece/B-B-Shuffle"
+      }
+    ],
+    "category": [
+      "Information Security"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "backdoor-breaches-aws-deck.jpg",
+    "name": "Backdoor & Breaches AWS Deck",
+    "updatedDate": "2025-12-8",
+    "createdDate": "2025-12-8"
   },
   {
     "image": "cheese-o-matic.jpg",
@@ -37,7 +115,350 @@
       }
     ],
     "updatedDate": "2025-11-20",
-    "createdDate": "2025-11-20"
+    "createdDate": "2021-09-23"
+  },
+  {
+    "description": "Entirely custom designed and built greenhouse shed",
+    "features": [
+      "Lean-to against garden wall",
+      "Brick base and wooden structure",
+      "Custom design in CAD",
+      "Polycarbonate windows"
+    ],
+    "category": [
+      "Woodworking"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "custom-lean-to-greenhouse.jpg",
+    "name": "Custom Lean-to Greenhouse",
+    "updatedDate": "2025-12-13",
+    "createdDate": "2025-12-13"
+  },
+  {
+    "description": "Play chess over the internet with a physical chess board and pieces that are tracked via NFC.",
+    "features": [
+      "NFC Readers",
+      "Arduino Yun",
+      "LED Guidance"
+    ],
+    "category": [
+      "Electronics"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "digital-nfc-chessboard.jpg",
+    "name": "Digital NFC Chessboard",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2015-02-18"
+  },
+  {
+    "description": "Repairing a badly corroded circuit board so I can continue to annoy everyone with my poor piano skills.",
+    "features": [
+      "Replaced capacitors and cleaned",
+      "Makes noise again",
+      {
+        "text": "Read more",
+        "link": "https://thomaspreece.com/2015/02/18/digital-piano-repair/"
+      }
+    ],
+    "category": [
+      "Electronics"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "name": "Digital Piano Repair",
+    "image": "digital-piano-repair.jpg",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2014-11-18"
+  },
+  {
+    "description": "Custom fitted dresser table",
+    "features": [
+      "Recycled Pine Floorboards",
+      "Fits neatly in unusable corner"
+    ],
+    "category": [
+      "Woodworking"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "dresser-table.jpg",
+    "name": "Dresser Table",
+    "updatedDate": "2025-12-13",
+    "createdDate": "2025-12-13"
+  },
+  {
+    "description": "Repurposed an old Kindle to help turn lights on and off.",
+    "features": [
+      "Hacked Kindle Paperwhite",
+      "Low Power",
+      "Very limited Kindle browser",
+      {
+        "text": "Read more",
+        "link": "https://thomaspreece.com/2019/12/10/home-assistant-kindle-dashboard/"
+      }
+    ],
+    "category": [
+      "Software Engineering"
+    ],
+    "status": "DECOMISSIONED",
+    "status_text": "Kindle Paperwhite just too limited to be smooth interface",
+    "image": "eink-home-assistant-dashboard.jpg",
+    "name": "eInk Home Assistant Dashboard",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2019-12-10"
+  },
+  {
+    "description": "A printer for tinkering. Sometimes it worked.",
+    "features": [
+      "Extensive upgrades",
+      "Learnt CAD",
+      "OctoPrint"
+    ],
+    "category": [
+      "3D Printing"
+    ],
+    "status": "DECOMISSIONED",
+    "status_text": "Times move on and better printers have come along",
+    "image": "ender-3.jpg",
+    "name": "Ender 3",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2018-10-30"
+  },
+  {
+    "description": "Retro-fitting factory equipment to make it smarter",
+    "features": [
+      "Arduino",
+      "Raspberry Pi Controller",
+      "A lot of tape and trial and error"
+    ],
+    "category": [
+      "Electronics"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "factory-floor-sensors.jpg",
+    "name": "Factory Floor Sensors",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2015-02-18"
+  },
+  {
+    "description": "Custom built wardrobe out of old floorboards",
+    "features": [
+      "Recycled pine floorboards",
+      "Custom fitted",
+      "Open style"
+    ],
+    "category": [
+      "Woodworking"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "fitted-wardrobe.jpg",
+    "name": "Fitted Wardrobe",
+    "updatedDate": "2025-12-13",
+    "createdDate": "2025-12-13"
+  },
+  {
+    "description": "Tracks food in your Freezer",
+    "features": [
+      "Simple React App",
+      "Mobile friendly",
+      {
+        "text": "Read more",
+        "link": "https://github.com/thomaspreece/freezer-tracker"
+      }
+    ],
+    "category": [
+      "Software Engineering"
+    ],
+    "status": "DECOMISSIONED",
+    "status_text": "",
+    "image": "freezer-tracker.jpg",
+    "name": "Freezer Tracker",
+    "updatedDate": "2025-12-8",
+    "createdDate": "2025-12-8"
+  },
+  {
+    "description": "Bruteforce test the permissions on a GitHub App, OAuth App or PAT.",
+    "features": [
+      "Tests permissions one by one",
+      "Supports GitHub App tokens",
+      {
+        "text": "Read more",
+        "link": "https://github.com/thomaspreece/GitHub-Token-Tester"
+      }
+    ],
+    "category": [
+      "Software Engineering",
+      "Information Security"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "github-token-tester.jpg",
+    "name": "GitHub Token Tester",
+    "updatedDate": "2025-12-8",
+    "createdDate": "2025-12-8"
+  },
+  {
+    "description": "Handmade from a slab of wood. Custom velvet lined inserts.",
+    "features": [
+      "Custom made",
+      "3D printed inserts lined with velvet"
+    ],
+    "category": [
+      "Woodworking",
+      "Crafts",
+      "3D Printing"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "homemade-jewellery-box.jpg",
+    "name": "Homemade Jewellery Box",
+    "updatedDate": "2025-12-13",
+    "createdDate": "2025-12-13"
+  },
+  {
+    "description": "Test what network requests an application makes",
+    "features": [
+      "Performs MITM on HTTPS",
+      "Captures DNS requests",
+      "Returning either fake response data or real server data",
+      {
+        "text": "Read more",
+        "link": "https://thomaspreece.com/2022/10/01/proxmox-intercepting-network-traffic-tooling-setup-guide/"
+      }
+    ],
+    "category": [
+      "Homelab",
+      "Information Security"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "name": "Intercepting Network Traffic",
+    "image": "intercepting-network-traffic.jpg",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2022-10-1"
+  },
+  {
+    "description": "Save your progress in JuiceShop and port to a newer running version",
+    "features": [
+      "Parses the ContinueCode Cookie",
+      "Supports all JuiceShop versions",
+      {
+        "text": "Read more",
+        "link": "https://github.com/thomaspreece/juiceshop_update_continuecode"
+      }
+    ],
+    "category": [
+      "Software Engineering"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "juiceshop-continuecode-updater.jpg",
+    "name": "JuiceShop ContinueCode Updater",
+    "updatedDate": "2025-12-8",
+    "createdDate": "2025-12-8"
+  },
+  {
+    "description": "A Kodi plugin to experiment into what iPlayer may look like with a complete back-catalogue",
+    "features": [
+      "Kodi Plugin",
+      "TVDB Support",
+      {
+        "text": "Read more",
+        "link": "https://github.com/thomaspreece/kodi_redux_plugin"
+      }
+    ],
+    "category": [
+      "Software Engineering"
+    ],
+    "status": "DECOMISSIONED",
+    "status_text": "",
+    "image": "kodi-plugin.jpg",
+    "name": "Kodi Plugin",
+    "updatedDate": "2025-12-9",
+    "createdDate": "2025-12-9"
+  },
+  {
+    "description": "CTFD, Security Shepherd and Secure Coding Dojo all in one.",
+    "features": [
+      "Microk8s",
+      "KeyCloak integration",
+      {
+        "text": "Read more",
+        "link": "https://github.com/thomaspreece/microk8s-training-platform"
+      }
+    ],
+    "category": [
+      "Software Engineering",
+      "Information Security"
+    ],
+    "status": "DECOMISSIONED",
+    "status_text": "Ran during 2020",
+    "image": "kubernetes-security-training-platform.jpg",
+    "name": "Kubernetes Security Training Platform",
+    "updatedDate": "2025-12-9",
+    "createdDate": "2025-12-9"
+  },
+  {
+    "description": "All the flexibility of Docker with even more complexity",
+    "features": [
+      "Microk8s",
+      "Runs: PiHole, Home Assistant, Tandoor and other software",
+      "Deployed from GitHub",
+      {
+        "text": "Read more",
+        "link": "https://thomaspreece.com/2021/09/30/project-kubernetes-homelab/"
+      }
+    ],
+    "category": [
+      "Homelab"
+    ],
+    "status": "DECOMISSIONED",
+    "status_text": "Upgraded to v2",
+    "image": "kubernetes-server-v1.jpg",
+    "name": "Kubernetes Server v1",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2021-09-30"
+  },
+  {
+    "description": "Modified Throwing Star LAN Tap",
+    "features": [
+      "Listen on 100Mbps connections",
+      "Throw it at people",
+      {
+        "text": "View design",
+        "link": "https://github.com/thomaspreece/throwing-star-lan-tap"
+      }
+    ],
+    "category": [
+      "Electronics"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "lan-tap.jpg",
+    "name": "LAN Tap",
+    "updatedDate": "2025-12-8",
+    "createdDate": "2025-12-8"
+  },
+  {
+    "description": "The best of all chutneys",
+    "features": [
+      "Tom head stickers",
+      "Huge batch size",
+      "Tasty"
+    ],
+    "category": [
+      "Crafts"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "mango-chutney.jpg",
+    "name": "Mango Chutney",
+    "updatedDate": "2025-12-13",
+    "createdDate": "2025-12-13"
   },
   {
     "description": "A mini 10inch 3D printed rack to hold my homelab",
@@ -56,6 +477,125 @@
     "name": "Mini Rack",
     "updatedDate": "2025-11-20",
     "createdDate": "2025-11-20"
+  },
+  {
+    "description": "Leveraging ESP32 Audio development boards to synchronise audio across multiple speakers",
+    "features": [
+      "Logitech Media Server (LMS)",
+      "squeezelite-esp32 & ESP32-1AS",
+      "3D printed case",
+      {
+        "text": "Read more",
+        "link": "https://thomaspreece.com/2019/12/10/project-multi-room-synchronised-audio/"
+      }
+    ],
+    "category": [
+      "Electronics",
+      "Homelab",
+      "3D Printing"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "multi-room-synchronised-audio.jpg",
+    "name": "Multi-room Synchronised Audio",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2019-12-10"
+  },
+  {
+    "description": "Tearing down the old one and fitting a new fireplace",
+    "features": [
+      "Wall mounted",
+      "Oak effect"
+    ],
+    "category": [
+      "Woodworking"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "new-fireplace.jpg",
+    "name": "New Fireplace",
+    "updatedDate": "2025-12-13",
+    "createdDate": "2025-12-13"
+  },
+  {
+    "description": "Parse your ebook recipes straight into Tandoor Recipe Manager",
+    "features": [
+      "Flexible parsing specification",
+      "Supports Tandoor",
+      {
+        "text": "Read more",
+        "link": "https://github.com/thomaspreece/recipe-ebook-parser"
+      }
+    ],
+    "category": [
+      "Software Engineering"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "parse-recipe-ebook-for-tandoor.jpg",
+    "name": "Parse Recipe Ebook for Tandoor",
+    "updatedDate": "2025-12-8",
+    "createdDate": "2025-12-8"
+  },
+  {
+    "description": "Control access to your data like never before.",
+    "features": [
+      "Solid Data Pod",
+      "Reverse Engineering",
+      "Improving prototype security"
+    ],
+    "category": [
+      "Software Engineering",
+      "Information Security"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "personal-data-stores.jpg",
+    "name": "Personal Data Stores",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2021-01-25"
+  },
+  {
+    "description": "An extensive product for managing your game collection. Looks cool in an arcade cabinet.",
+    "features": [
+      "Custom Website in PHP",
+      "Software built on BlitzMax Language",
+      "People actually paid money for it",
+      {
+        "text": "Read more",
+        "link": "https://thomaspreece.com/2015/02/19/photon-gamemanager/"
+      }
+    ],
+    "category": [
+      "Software Engineering"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "photon-gamemanager.jpg",
+    "name": "Photon GameManager",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2011-10-09"
+  },
+  {
+    "description": "Protect your network with security obscurity!",
+    "features": [
+      "Classic and Fwknop Port Knocking Techniques",
+      "Hooks into MikroTik Router",
+      {
+        "text": "GitHub Repo",
+        "link": "https://github.com/thomaspreece/mikrotik-fwknop-pi"
+      }
+    ],
+    "category": [
+      "Homelab",
+      "Software Engineering"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "port-knocking.jpg",
+    "name": "Port Knocking",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2017-09-25"
   },
   {
     "description": "Low effort way to show off my projects.",
@@ -79,6 +619,194 @@
     "createdDate": "2025-11-20"
   },
   {
+    "description": "A selection of networks and VMs for everything from malware analysis to mobile forensics",
+    "features": [
+      "Proxmox Hypervisor",
+      "PfSense and virtual networking",
+      "Selection of VMs",
+      {
+        "text": "Read more",
+        "link": "https://thomaspreece.com/2022/08/01/project-proxmox-homelab/"
+      }
+    ],
+    "category": [
+      "Homelab"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "proxmox-homelab.jpg",
+    "name": "Proxmox HomeLab",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2022-08-1"
+  },
+  {
+    "description": "A fun security CTF with a collection of challenges",
+    "features": [
+      "CTFD",
+      "Kubernetes",
+      "Custom challenges",
+      {
+        "text": "Read more ",
+        "link": "https://github.com/thomaspreece/rd-ctf-2020"
+      }
+    ],
+    "category": [
+      "Software Engineering",
+      "Information Security"
+    ],
+    "status": "DECOMISSIONED",
+    "status_text": "Ran during 2020 only",
+    "image": "r-d-security-ctf.jpg",
+    "name": "R&D Security CTF",
+    "updatedDate": "2025-12-9",
+    "createdDate": "2025-12-9"
+  },
+  {
+    "description": "Shows photos and other images",
+    "features": [
+      "Shows Wedding Photos",
+      "Integrates with Home Assistant",
+      "Raspberry Pi"
+    ],
+    "category": [
+      "Software Engineering"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "raspberry-pi-photo-frame.jpg",
+    "name": "Raspberry Pi Photo Frame",
+    "updatedDate": "2025-12-13",
+    "createdDate": "2025-12-13"
+  },
+  {
+    "description": "Heat each room separately with this smart system.",
+    "features": [
+      "Drayton Wiser",
+      "Home Assistant Integration",
+      "Schedules per room"
+    ],
+    "category": [
+      "Software Engineering"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "smart-heating-system.jpg",
+    "name": "Smart Heating System",
+    "updatedDate": "2025-12-13",
+    "createdDate": "2025-12-13"
+  },
+  {
+    "description": "Using Home Assistant to connect up all my IoT devices",
+    "features": [
+      "Controls Heating, Lights, Blinds and other devices",
+      "Easy Integration",
+      "Wife Approved"
+    ],
+    "category": [
+      "Homelab"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "smart-home.jpg",
+    "name": "Smart Home",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2019-11-27"
+  },
+  {
+    "description": "Kitchen organisation at its finest",
+    "features": [
+      "Custom Labels",
+      "Range of spices"
+    ],
+    "category": [
+      "Crafts"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "spice-draw.jpg",
+    "name": "Spice Draw",
+    "updatedDate": "2025-12-13",
+    "createdDate": "2025-12-13"
+  },
+  {
+    "description": "Exploring what happens if you put something insecure on the internet.",
+    "features": [
+      "Cowrie Honeypot",
+      "Lots of SSH connections",
+      {
+        "text": "Read more",
+        "link": "https://thomaspreece.com/2021/05/16/project-honeypot/"
+      }
+    ],
+    "category": [
+      "Information Security"
+    ],
+    "status": "DECOMISSIONED",
+    "status_text": "Ran for a few weeks",
+    "image": "ssh-honeypot.jpg",
+    "name": "SSH Honeypot",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2021-05-16"
+  },
+  {
+    "description": "Hook an Arduino up to Scratch V2 in a super simply way.",
+    "features": [
+      "Simple to use UI",
+      "Used by Children",
+      "Teaching resources",
+      {
+        "text": "Read more",
+        "link": "https://thomaspreece.com/2015/02/19/supereasy-a4s/"
+      }
+    ],
+    "category": [
+      "Electronics",
+      "Software Engineering"
+    ],
+    "status": "DECOMISSIONED",
+    "status_text": "Useful at the time but superseded by other easier to use software",
+    "name": "SuperEasy Arduino For Scratch",
+    "image": "supereasy-arduino-for-scratch.jpg",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2014-06-04"
+  },
+  {
+    "description": "Free indie games are really fun and free. Find them on this site.",
+    "features": [
+      "PHP",
+      "Points based system for user submitted content",
+      "Extensive collection of titles"
+    ],
+    "category": [
+      "Software Engineering"
+    ],
+    "status": "DECOMISSIONED",
+    "status_text": "Maintainence cost got too large",
+    "image": "the-free-games-database.jpg",
+    "name": "The Free Games Database",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2012-06-17"
+  },
+  {
+    "description": "Lock chocolate away for a set time",
+    "features": [
+      "Servo lock and Arduino controller",
+      "3D printed case",
+      "Keypad and LCD for interface"
+    ],
+    "category": [
+      "Electronics",
+      "Software Engineering",
+      "3D Printing"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "timer-box.jpg",
+    "name": "Timer Box",
+    "updatedDate": "2025-12-13",
+    "createdDate": "2025-12-13"
+  },
+  {
     "description": "A tiny bot that shows messages and our wedding photos",
     "features": [
       "Rechargable Battery",
@@ -95,5 +823,91 @@
     "image": "tombot.jpg",
     "updatedDate": "2025-11-26",
     "createdDate": "2025-11-20"
+  },
+  {
+    "description": "Simple draw for shoes",
+    "features": [
+      "Hinged",
+      "Painted Plywood"
+    ],
+    "category": [
+      "Woodworking"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "under-stairs-storage.jpg",
+    "name": "Under stairs storage",
+    "updatedDate": "2025-12-13",
+    "createdDate": "2025-12-13"
+  },
+  {
+    "description": "A super basic website but I got a pint out of it so not all bad.",
+    "features": [
+      "Custom styling",
+      "Basic PHP"
+    ],
+    "category": [
+      "Software Engineering"
+    ],
+    "status": "DECOMISSIONED",
+    "status_text": "",
+    "name": "University Elections Website",
+    "image": "university-elections-website.jpg",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2014-02-21"
+  },
+  {
+    "description": "Wife approved outdoor vegetable beds",
+    "features": [
+      "Recycled wood",
+      "Carrots and parsnips"
+    ],
+    "category": [
+      "Woodworking"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "vegetable-beds.jpg",
+    "name": "Vegetable Beds",
+    "updatedDate": "2025-12-13",
+    "createdDate": "2025-12-13"
+  },
+  {
+    "description": "Archive your website before it falls into the internet abyss.",
+    "features": [
+      "WARC Format",
+      "Recording and Playback tooling",
+      {
+        "text": "Read more",
+        "link": "https://thomaspreece.com/2018/01/29/project-web-archiving/"
+      }
+    ],
+    "category": [
+      "Software Engineering"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "website-archiving.jpg",
+    "name": "Website Archiving",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2018-01-29"
+  },
+  {
+    "description": "Router table within woodworking bench",
+    "features": [
+      "Movable Fence",
+      "Flush plate",
+      "Customised POF 1200 handheld router",
+      "Router lift mechanism"
+    ],
+    "category": [
+      "Woodworking"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "workbench-router-table.jpg",
+    "name": "Workbench Router Table",
+    "updatedDate": "2025-12-13",
+    "createdDate": "2025-12-13"
   }
 ]
