@@ -278,7 +278,7 @@
     "image": "freezer-tracker.jpg",
     "name": "Freezer Tracker",
     "updatedDate": "2025-12-8",
-    "createdDate": "2025-12-8"
+    "createdDate": "2021-12-24"
   },
   {
     "description": "Bruteforce test the permissions on a GitHub App, OAuth App or PAT.",
@@ -379,7 +379,7 @@
     "image": "kodi-plugin.jpg",
     "name": "Kodi Plugin",
     "updatedDate": "2025-12-9",
-    "createdDate": "2025-12-9"
+    "createdDate": "2017-04-29"
   },
   {
     "description": "CTFD, Security Shepherd and Secure Coding Dojo all in one.",
@@ -400,7 +400,7 @@
     "image": "kubernetes-security-training-platform.jpg",
     "name": "Kubernetes Security Training Platform",
     "updatedDate": "2025-12-9",
-    "createdDate": "2025-12-9"
+    "createdDate": "2021-02-10"
   },
   {
     "description": "All the flexibility of Docker with even more complexity",
@@ -659,7 +659,7 @@
     "image": "r-d-security-ctf.jpg",
     "name": "R&D Security CTF",
     "updatedDate": "2025-12-9",
-    "createdDate": "2025-12-9"
+    "createdDate": "2020-10-21"
   },
   {
     "description": "Shows photos and other images",
