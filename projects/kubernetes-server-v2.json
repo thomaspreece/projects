@@ -1,0 +1,18 @@
+{
+  "description": "Runs all my services - now with added redundancy.",
+  "features": [
+    "HP Mini G6 & G9",
+    "Proxmox Hypervisor",
+    "MicroK8s",
+    "Router handles fallover"
+  ],
+  "category": [
+    "Homelab"
+  ],
+  "status": "STARTED",
+  "status_text": "",
+  "image": "kubernetes-server-v2.jpg",
+  "name": "Kubernetes Server v2",
+  "updatedDate": "2025-12-16",
+  "createdDate": "2025-12-16"
+}
