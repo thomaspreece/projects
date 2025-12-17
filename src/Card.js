@@ -159,9 +159,18 @@ function Card({
     cardOffset: {cardOffset} <br />
   </div>
 
+  const [showImageModal, setShowImageModal] = useState(false);
+
+  const image_modal_jsx = <div id="modal" onClick={() => setShowImageModal(false)}>
+      <div>
+          <div class="imagemodal" style={{backgroundImage: `url(${cardData.image})`}}>
+          </div>
+      </div>
+  </div>
+
   const card_jsx = <animated.div key={cardPosition} className="cardcontainer" style={{ transform: to([props.x, props.y], (x, y) => `translate3d(${x}px,${y}px,0)`) , zIndex: props.zIndex}} cardnumber={dataIndex}>
     <animated.div ref={cardRef} className="card" style={{ transform: to([props.rot, props.scale], trans), backgroundImage: `url(${process.env.PUBLIC_URL}/images/notebook.png)` }}>
-      <div className="imagetape">
+      <div className="imagetape" onClick={() => setShowImageModal(true)}>
         <div style={{width: tapeOffset.tapeWidth, height: tapeOffset.tapeHeight, position: "relative", zIndex: 1, top: tapeOffset.tapeTop, left: tapeOffset.tapeLeft}}>
           {cardData.image.length > 0 ? <div className="tape-section"></div> : null}
         </div>
@@ -193,6 +202,7 @@ function Card({
       </div>
       {showDebug ? debug_jsx : null }
     </animated.div>
+      {showImageModal ? image_modal_jsx : null}    
   </animated.div>
   return card_jsx
 }

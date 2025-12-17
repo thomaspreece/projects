@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { useParams, useNavigate, Outlet, useLocation } from "react-router";
 import "./Navigation.css"
 
@@ -8,6 +8,8 @@ function Navigation({projectCategories}) {
     const navigate = useNavigate();
     let { categoryNameSlug } = useParams();
     let location = useLocation()
+
+    const [showCategoryList, setShowCategoryList] = useState(false);
 
     let allProjectCategories = [
         "All",
@@ -26,25 +28,43 @@ function Navigation({projectCategories}) {
 
     let menuText = ""
     let menuUrl = "/"
-    let categoryUrl = "/"
-    let nextCategoryIndex = (categoryIndex + 1) % allProjectCategories.length 
     if(location.pathname.startsWith("/list")){
         // Currently on list route 
         menuText = "🂠"
         menuUrl = `/view/${categoryNameSlug}/`
-        categoryUrl = `/list/${nameToSlug(allProjectCategories[nextCategoryIndex])}/`
     } else {
         // Currently on view route 
         menuText = "☰"
         menuUrl = `/list/${categoryNameSlug}/`
-        categoryUrl = `/view/${nameToSlug(allProjectCategories[nextCategoryIndex])}/`
     }
+
+    const categoryButtons = allProjectCategories.map((projectCategory) => {
+        let categoryUrl = ""
+        if(location.pathname.startsWith("/list")){
+            categoryUrl = `/list/${nameToSlug(projectCategory)}/`
+        } else {
+            categoryUrl = `/view/${nameToSlug(projectCategory)}/`
+        }
+        return <button key={projectCategory} className="categorylist-button" onClick={() => {
+            setShowCategoryList(false) 
+            navigate(categoryUrl)
+        }}>
+            <span>{projectCategory}</span>
+        </button>
+    })
+    const category_jsx = <div id="modal" onClick={() => setShowCategoryList(false)}>
+        <div>
+            <h1>Category Filter</h1>
+            {categoryButtons}
+        </div>
+    </div>
 
     return <div>
     <button key="menu" id="menu-button" onClick={() => navigate(menuUrl)}>{menuText}</button>
-    <button key="category" id="category-button" onClick={() => navigate(categoryUrl)}>
+    <button key="category" id="category-button" onClick={() => setShowCategoryList(true)}>
         <span>Category: {allProjectCategories[categoryIndex]}</span>
     </button>
+    {showCategoryList ? category_jsx : null}
 
     <Outlet />
 </div>

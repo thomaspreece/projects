@@ -49,3 +49,59 @@
     width: 48vw;
   }
 }
+
+#modal {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.7);
+}
+
+#modal > div {
+  margin-top: 5vh;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  background-image: url(/public/images/canvas.png);
+  background-repeat: repeat-y;
+  background-size: 100%;
+  border-radius: 3px;
+  border: 10px solid #dadada; 
+  -webkit-box-shadow: 0px 0px 10px #777; 
+  -moz-box-shadow: 0px 0px 10px #777; 
+  box-shadow: 0px 0px 10px #777;  
+  height: 90vh;
+  overflow-y: scroll;
+}
+
+#modal h1 {
+  text-align: center;
+  font-size: calc(5*var(--text-unit));
+}
+
+.categorylist-button{
+  display: block;
+  width: 50vw;
+  margin-right: auto;
+  margin-left: auto;
+  border: none; 
+  margin-bottom: 1vh;
+  font-size: calc(2*var(--text-unit));
+  opacity: 1;
+  animation: fadeIn 1s ease-in-out;
+  height: 10vh;
+  line-height: 10vh;
+  background-color: rgba(0,0,0,0.03);
+}
+
+.categorylist-button:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+.categorylist-button span{
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
