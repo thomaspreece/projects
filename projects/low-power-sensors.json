@@ -1,5 +1,5 @@
 {
-  "description": "MySensors based",
+  "description": "Custom low power wireless sensor devices",
   "features": [
     "Rfm69 radio with Arduino",
     "Custom circuitboards",
@@ -15,8 +15,8 @@
   ],
   "status": "DECOMISSIONED",
   "status_text": "",
-  "image": "low-power-sensors.jpg",
   "name": "Low-power Sensors",
+  "image": "low-power-sensors.jpg",
   "updatedDate": "2025-12-19",
   "createdDate": "2025-12-19"
 }
