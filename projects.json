@@ -480,6 +480,28 @@
     "createdDate": "2021-05-01"
   },
   {
+    "description": "MySensors based",
+    "features": [
+      "Rfm69 radio with Arduino",
+      "Custom circuitboards",
+      "MySensors & Home Assistant Integration",
+      {
+        "text": "Custom MySensors Gateway",
+        "link": "https://github.com/thomaspreece/mysensors-serial-to-mqtt"
+      }
+    ],
+    "category": [
+      "Electronics",
+      "Software Engineering"
+    ],
+    "status": "DECOMISSIONED",
+    "status_text": "",
+    "image": "low-power-sensors.jpg",
+    "name": "Low-power Sensors",
+    "updatedDate": "2025-12-19",
+    "createdDate": "2025-12-19"
+  },
+  {
     "description": "The best of all chutneys",
     "features": [
       "Tom head stickers",
