@@ -55,6 +55,24 @@
     "createdDate": "2022-04-01"
   },
   {
+    "description": "Keeps my plants alive.",
+    "features": [
+      "Esphome & Home Assistant Connected",
+      "Water pumps",
+      "Recycled pine floorboards"
+    ],
+    "category": [
+      "Woodworking",
+      "Electronics"
+    ],
+    "status": "STARTED",
+    "status_text": "",
+    "image": "automatic-plant-watering-system.jpg",
+    "name": "Automatic Plant Watering System",
+    "updatedDate": "2025-12-19",
+    "createdDate": "2025-12-19"
+  },
+  {
     "description": "Research into the security of AWS CodeConnections via their use in several different AWS Services",
     "features": [
       "AWS CodeBuild, CodePipeline",
