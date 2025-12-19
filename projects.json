@@ -20,6 +20,24 @@
     "createdDate": "2020-09-26"
   },
   {
+    "description": "Remote controlled antweight robot with custom 3D printed case and circuit.",
+    "features": [
+      "3D printed case",
+      "Flipper weapon",
+      "Modified Devo 7E transmitter"
+    ],
+    "category": [
+      "Electronics",
+      "3D Printing"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "antweight-robot.jpg",
+    "name": "Antweight Robot",
+    "updatedDate": "2025-12-19",
+    "createdDate": "2025-12-19"
+  },
+  {
     "description": "Large arch light for lighting your desk",
     "features": [
       "Bent plywood sheets",
