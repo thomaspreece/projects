@@ -1,0 +1,17 @@
+{
+  "description": "Hacking a smartwatch to run as the control panel for an ebike",
+  "features": [
+    "nRF microcontroller",
+    "Tiny screen"
+  ],
+  "category": [
+    "Electronics",
+    "Software Engineering"
+  ],
+  "status": "CANCELLED",
+  "status_text": "",
+  "image": "ebike-smartwatch-controller.jpg",
+  "name": "Ebike Smartwatch Controller",
+  "updatedDate": "2025-12-19",
+  "createdDate": "2025-12-19"
+}
