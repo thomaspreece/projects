@@ -536,6 +536,26 @@
     "createdDate": "2022-09-14"
   },
   {
+    "description": "Project to uncover my digital footprint",
+    "features": [
+      "Learning OSINT Techniques",
+      "Teaching others",
+      {
+        "text": "Read more",
+        "link": "https://thomaspreece.com/2024/02/06/osint-presentation-bsides-london-2023/"
+      }
+    ],
+    "category": [
+      "Information Security"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "osint-ing-myself-to-uncover-30-years-of-data-leakage.jpg",
+    "name": "OSINT’ing myself to uncover 30 years of data leakage",
+    "updatedDate": "2025-12-19",
+    "createdDate": "2025-12-19"
+  },
+  {
     "description": "Parse your ebook recipes straight into Tandoor Recipe Manager",
     "features": [
       "Flexible parsing specification",
