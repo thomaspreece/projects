@@ -1,0 +1,19 @@
+{
+  "description": "Extremely flexible indoor woodworking workbench",
+  "features": [
+    "Lifting cutting track",
+    "Movable fense with stop",
+    "Workbench vice and clamping",
+    "Dogholes",
+    "Caster wheels for portability"
+  ],
+  "category": [
+    "Woodworking"
+  ],
+  "status": "COMPLETE",
+  "status_text": "",
+  "image": "portable-woodworking-workbench.jpg",
+  "name": "Portable Woodworking Workbench",
+  "updatedDate": "2025-12-20",
+  "createdDate": "2025-12-20"
+}
