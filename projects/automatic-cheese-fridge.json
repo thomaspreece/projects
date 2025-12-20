@@ -1,0 +1,17 @@
+{
+  "description": "Precise control of fridge temperature",
+  "features": [
+    "Arduino, Bluetooth and Temp Sensors",
+    "Sonoff switch",
+    "BrewPi software"
+  ],
+  "category": [
+    "Electronics"
+  ],
+  "status": "COMPLETE",
+  "status_text": "",
+  "image": "automatic-cheese-fridge.jpg",
+  "name": "Automatic Cheese Fridge",
+  "updatedDate": "2025-12-20",
+  "createdDate": "2025-12-20"
+}
