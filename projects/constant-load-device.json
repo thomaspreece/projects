@@ -1,0 +1,16 @@
+{
+  "description": "Test power supplies with a constant load",
+  "features": [
+    "Electronics kit",
+    "Control for setting amps"
+  ],
+  "category": [
+    "Electronics"
+  ],
+  "status": "COMPLETE",
+  "status_text": "",
+  "image": "constant-load-device.jpg",
+  "name": "Constant Load Device",
+  "updatedDate": "2025-12-20",
+  "createdDate": "2025-12-20"
+}
