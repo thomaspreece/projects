@@ -263,6 +263,27 @@
     "createdDate": "2019-12-10"
   },
   {
+    "description": "Workbench for electronics, crafts and projects",
+    "features": [
+      "Lots of storage & parts bins",
+      "Soldering station",
+      "Electronics testing station",
+      "Crafting zone",
+      "Air filtering"
+    ],
+    "category": [
+      "Woodworking",
+      "Electronics",
+      "Crafts"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "electronics-crafts-workbench.jpg",
+    "name": "Electronics & Crafts Workbench",
+    "updatedDate": "2025-12-20",
+    "createdDate": "2025-12-20"
+  },
+  {
     "description": "A printer for tinkering. Sometimes it worked.",
     "features": [
       "Extensive upgrades",
