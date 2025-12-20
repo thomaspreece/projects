@@ -1,0 +1,18 @@
+{
+  "description": "Powerful extraction for use with powertools indoors",
+  "features": [
+    "Cyclone system",
+    "Powerful Nilfisk Alto Aero vacuum",
+    "Powers on with tooling",
+    "Caster wheels for portability"
+  ],
+  "category": [
+    "Woodworking"
+  ],
+  "status": "COMPLETE",
+  "status_text": "",
+  "image": "dust-extraction-cyclone.jpg",
+  "name": "Dust Extraction Cyclone",
+  "updatedDate": "2025-12-20",
+  "createdDate": "2025-12-20"
+}
