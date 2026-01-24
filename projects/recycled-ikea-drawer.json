@@ -1,0 +1,17 @@
+{
+  "description": "One day project to recycle Ikea furniture into a useful seat and shoe rack.",
+  "features": [
+    "Shortened sides",
+    "More shelves",
+    "Reinforced top for sitting"
+  ],
+  "category": [
+    "Woodworking"
+  ],
+  "status": "COMPLETE",
+  "status_text": "",
+  "image": "recycled-ikea-drawer.jpg",
+  "name": "Recycled Ikea Drawer",
+  "updatedDate": "2026-1-24",
+  "createdDate": "2026-1-24"
+}
